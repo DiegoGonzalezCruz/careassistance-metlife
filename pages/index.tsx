@@ -3,6 +3,7 @@ import { Chanels } from '../components/chanels/Chanels'
 import { Footer } from '../components/laylout/Footer'
 import { Navigation } from '../components/laylout/Navigation'
 import { ProgramSlider } from '../components/programs/ProgramSlider'
+import { Explore } from '../components/slider/Explore'
 import { MainSlider } from '../components/slider/MainSlider'
 import { SecondarySlider } from '../components/slider/SecondarySlider'
 
@@ -21,6 +22,7 @@ export default function Home() {
         <ProgramSlider />
         <Chanels />
         <SecondarySlider />
+        <Explore />
         <Footer />
       </main>
 

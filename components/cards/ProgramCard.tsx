@@ -1,7 +1,15 @@
 import React from 'react'
-import { Props } from '../../types'
 
-const ProgramCard = ({ program }: Props) => {
+const ProgramCard = ({
+  program
+}: {
+  program: {
+    title: string
+    schedule: string
+    description: string
+    img: string
+  }
+}) => {
   return (
     <div className="border-primary border-2 rounded-xl">
       <h2>{program.title}</h2>

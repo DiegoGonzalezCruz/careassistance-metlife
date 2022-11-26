@@ -10,7 +10,8 @@ module.exports = {
       secondary: '#90CF3F',
       secondaryDark: '#0061A4',
       input: '#9E9E9E',
-      error: '#FF1F1F'
+      error: '#FF1F1F',
+      backgroundDark: '#F4F4F4'
     },
     extend: {},
   },
