@@ -15,7 +15,7 @@ export const SecondarySlider = () => {
       <ul>
         {features.map((feat) => {
           return (
-            <li>
+            <li key={feat.description}>
               <Image
                 src={feat.img}
                 width={400}

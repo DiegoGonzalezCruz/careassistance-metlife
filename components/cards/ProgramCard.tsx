@@ -1,20 +1,28 @@
-import React from 'react'
+import Image from 'next/image'
+import { Program } from '../../types'
 
-const ProgramCard = ({
-  program
-}: {
-  program: {
-    title: string
-    schedule: string
-    description: string
-    img: string
-  }
-}) => {
+const ProgramCard = ({ program }: Program) => {
   return (
-    <div className="border-primary border-2 rounded-xl">
-      <h2>{program.title}</h2>
-      <p>{program.description}</p>
-      <p>{program.schedule}</p>
+    <div className=" rounded-xl snap-start w-full shrink-0 my-5">
+      <Image
+        src={program.img}
+        alt={program.title}
+        width={150}
+        height={150}
+        className="rounded-full mx-auto"
+      />
+      <div className=" w-full text-center">
+        <h2 className="text-primary text-xl font-normal font-Montserrat">
+          {program.pretitle}{' '}
+        </h2>
+        <span className="text-primary text-3xl font-Montserrat font-bold">
+          {program.posttitle}
+        </span>
+      </div>
+      <div className="w-3/4 mx-auto text-center py-5">
+        <p className="text-primary">{program.description}</p>
+      </div>
+      <div className="w-3/4 mx-auto text-center py-5">{program.schedule}</div>
     </div>
   )
 }

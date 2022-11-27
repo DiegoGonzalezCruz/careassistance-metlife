@@ -4,15 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-size: 22px;
+}
+
 h1 {
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 700;
-  font-size: 80px;
+  font-weight: 900;
   line-height: 98px;
   /* identical to box height */
   text-transform: uppercase;
-  color: #000000;
 }
 
 h2 {
@@ -31,7 +33,7 @@ p {
   font-family: 'Titillium';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 27px;
   /* identical to box height, or 150% */
   color: #000000;
@@ -58,11 +60,14 @@ span {
   color: #000000;
 }
 
+.outlined-text {
+}
+
 @layer components {
   .debug1 {
     @apply border-2 border-error;
   }
   .debug2 {
-    @apply border-2 border-green-500;
+    @apply border-2 border-secondary;
   }
 }

@@ -1,13 +1,20 @@
-import { Program, Programs } from '../../types'
+import { Programs } from '../../types'
 import ProgramCard from '../cards/ProgramCard'
+import { useInView } from 'react-intersection-observer'
 
 const ProgramList = ({ programs }: Programs) => {
-  console.log(programs, 'programs')
+  // console.log(programs, 'programs')
+
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0
+  })
+
   return (
     <div>
-      <ul>
-        {programs.map((program) => {
-          return <ProgramCard program={program} />
+      <ul className="w-full flex flex-row overflow-scroll snap-x snap-mandatory">
+        {programs.map((program, idx) => {
+          return <ProgramCard program={program} key={program.title} />
         })}
       </ul>
     </div>

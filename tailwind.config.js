@@ -13,6 +13,18 @@ module.exports = {
       error: '#FF1F1F',
       backgroundDark: '#F4F4F4'
     },
+    fontFamily: {
+      Fira: ['Fira Sans', 'sans-serif'],
+      Montserrat: ['Montserrat', 'sans-serif'],
+      Titillium: ['Titillium Web', 'sans-serif']
+    },
+    fontSize: {
+      sm: '0.8rem',
+      base: '1rem',
+      'xl': '1.4rem',
+      '2xl': '1.65rem',
+      '3xl': '2.3rem',
+    },
     extend: {},
   },
   plugins: [],

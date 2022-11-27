@@ -18,7 +18,7 @@ export const Explore = () => {
       <ul>
         {benefits.map((benefit) => {
           return (
-            <li>
+            <li key={benefit.description}>
               <Image
                 src={benefit.img}
                 width={300}
