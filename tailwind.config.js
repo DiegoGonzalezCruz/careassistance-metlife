@@ -11,7 +11,8 @@ module.exports = {
       secondaryDark: '#0061A4',
       input: '#9E9E9E',
       error: '#FF1F1F',
-      backgroundDark: '#F4F4F4'
+      backgroundDark: '#F4F4F4',
+      white: '#f0f0f0'
     },
     fontFamily: {
       Fira: ['Fira Sans', 'sans-serif'],

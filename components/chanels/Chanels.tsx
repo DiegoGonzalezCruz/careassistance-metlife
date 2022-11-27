@@ -27,20 +27,22 @@ export const Chanels = () => {
         Ponemos a tu disposición, canales de atención exclusivos y recursos de
         comunicación estratégica, creados a la medida de tus necesidades.
       </p>
-      <ul className="">
+      <ul className=" snap-x snap-mandatory flex flex-row overflow-scroll">
         {channels.map((channel) => {
           return (
             <li
               key={channel.title}
-              className="border-primary border rounded-xl"
+              className=" rounded-xl shrink-0 w-full snap-start flex flex-col items-center gap-5 py-5"
             >
               <Image
                 src={channel.img}
-                width={200}
-                height={200}
+                width={80}
+                height={80}
                 alt={channel.title}
               />
-              <h2>{channel.title}</h2>
+              <h2 className="text-secondaryDark text-xl font-Fira">
+                {channel.title}
+              </h2>
             </li>
           )
         })}
