@@ -22,7 +22,7 @@ const ProgramCard = ({ program }: Program) => {
   ]
 
   return (
-    <div className=" rounded-xl snap-start w-full shrink-0 my-5">
+    <div className=" rounded-xl snap-start md:snap-center w-full md:w-1/3 shrink-0 my-5 h-full first:ml-10 last:mr-10">
       <Image
         src={program.img}
         alt={program.title}
@@ -30,20 +30,27 @@ const ProgramCard = ({ program }: Program) => {
         height={150}
         className="rounded-full mx-auto"
       />
-      <div className=" w-full text-center">
-        <h2 className="text-primary text-xl font-normal font-Montserrat">
-          {program.pretitle}{' '}
+      <div className=" w-full h-full text-center my-2 ">
+        <h2 className="text-primary text-xl md:text-sm font-normal font-Montserrat lin">
+          {program.pretitle}
+          <br />
+          <span className="text-primary text-3xl md:text-xl font-Montserrat font-bold ">
+            {program.posttitle}
+          </span>{' '}
         </h2>
-        <span className="text-primary text-3xl font-Montserrat font-bold">
-          {program.posttitle}
-        </span>
       </div>
-      <ul className="w-3/4 mx-auto flex flex-col gap-5">
+      <div className="w-3/4 mx-auto text-center ">
+        <div
+          className="text-primary prose prose-p:font-Titillium prose-p:text-primary md:prose-p:text-sm "
+          dangerouslySetInnerHTML={{ __html: program.description }}
+        />
+      </div>
+      <ul className="w-3/4 mx-auto flex flex-col gap-2 md:hidden ">
         {features.map((feat) => {
           return (
             <li
               key={feat.title}
-              className="flex flex-row items-center border-2 border-primary rounded-xl pl-2 h-12"
+              className="flex flex-row items-center border-2 border-primary rounded-xl pl-2 h-10"
             >
               <Image
                 src={feat.img}
@@ -59,10 +66,11 @@ const ProgramCard = ({ program }: Program) => {
           )
         })}
       </ul>
-      <div className="w-3/4 mx-auto text-center py-5">
-        <p className="text-primary">{program.description}</p>
-      </div>
-      <div className="w-3/4 mx-auto text-center py-5 ">{program.schedule}</div>
+
+      <div
+        className="w-3/4  md:w-full mx-auto text-center py-5 prose prose-p:text-sm prose-p:font-Fira prose-p:text-primary md:prose-p:text-sm"
+        dangerouslySetInnerHTML={{ __html: program.schedule }}
+      />
     </div>
   )
 }

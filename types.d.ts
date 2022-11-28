@@ -4,11 +4,12 @@ import { JsxElement } from 'typescript'
 export interface Program {
   program: {
     title: string
-    schedule: ReactNode | string
+    schedule: string
     description: string
     img: string
     pretitle: string
     posttitle: string
+    idx?: number
   }
 }
 export interface Programs {
@@ -17,9 +18,10 @@ export interface Programs {
     title: string
     description: string
     phone: string
-    schedule: ReactNode | string
+    schedule: string
     pretitle: string
     posttitle: string
+    idx?: number
   }[]
 }
 

@@ -4,11 +4,39 @@ import ProgramList from '../lists/ProgramList'
 const programs = [
   {
     title: 'consulta telemedicina',
-    schedule: (
-      <p>
-        Lunes a Viernes de 9:00 a 20:00 <br /> Sábados de 9:00 a 13:00
-      </p>
-    ),
+    schedule:
+      '<p>Lunes a Viernes de 9:00 a 20:00 <br /> Sábados de 9:00 a 13:00</p>',
+    phone: '+569123123123',
+    description:
+      '<p>Comunícate con un doctor a través de videollamada frente a cualquier duda sobre tu salud. <b>Servicio disponible para ti las 24 hrs.</b></p>',
+    img: '/img/cards/testImage.png',
+    pretitle: 'Consulta',
+    posttitle: 'telemedicina'
+  },
+  {
+    title: 'consulta veterinaria',
+    schedule: 'Mon to Fri',
+    phone: '+569123123123',
+    description:
+      '<p>A través de videollamada frente a cualquier duda sobre tu salud</p>',
+    img: '/img/cards/testImage.png',
+    pretitle: 'Consulta',
+    posttitle: 'veterinaria'
+  },
+  {
+    title: 'Consulta poética',
+    schedule: 'Mon to Fri',
+    phone: '+569123123123',
+    description:
+      'Através de videollamada frente a cualquier duda sobre tu salud. Esto es un texto agregado.',
+    img: '/img/cards/testImage.png',
+    pretitle: 'Consulta',
+    posttitle: 'poética'
+  },
+  {
+    title: 'consulta telemedicina',
+    schedule:
+      '<p>Lunes a Viernes de 9:00 a 20:00 <br /> Sábados de 9:00 a 13:00</p>',
     phone: '+569123123123',
     description:
       'Comunícate con un doctor a través de videollamada frente a cualquier duda sobre tu salud. Servicio disponible para ti las 24 hrs.',
@@ -20,7 +48,8 @@ const programs = [
     title: 'consulta veterinaria',
     schedule: 'Mon to Fri',
     phone: '+569123123123',
-    description: 'lorem blab la blasblsd asd',
+    description:
+      'A través de videollamada frente a cualquier duda sobre tu salud',
     img: '/img/cards/testImage.png',
     pretitle: 'Consulta',
     posttitle: 'veterinaria'
@@ -29,7 +58,8 @@ const programs = [
     title: 'Consulta poética',
     schedule: 'Mon to Fri',
     phone: '+569123123123',
-    description: 'lorem blab la blasblsd asd',
+    description:
+      'Através de videollamada frente a cualquier duda sobre tu salud. Esto es un texto agregado.',
     img: '/img/cards/testImage.png',
     pretitle: 'Consulta',
     posttitle: 'poética'
