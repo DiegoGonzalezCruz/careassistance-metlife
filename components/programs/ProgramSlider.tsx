@@ -3,7 +3,7 @@ import ProgramList from '../lists/ProgramList'
 
 const programs = [
   {
-    title: 'consulta telemedicina',
+    title: 'Consulta Médica',
     schedule:
       '<p>Lunes a Viernes de 9:00 a 20:00 <br /> Sábados de 9:00 a 13:00</p>',
     phone: '+569123123123',
@@ -24,7 +24,7 @@ const programs = [
     posttitle: 'veterinaria'
   },
   {
-    title: 'Consulta poética',
+    title: 'Consulta test 2',
     schedule: 'Mon to Fri',
     phone: '+569123123123',
     description:
@@ -45,7 +45,7 @@ const programs = [
     posttitle: 'telemedicina'
   },
   {
-    title: 'consulta veterinaria',
+    title: 'consulta veterinaria 2',
     schedule: 'Mon to Fri',
     phone: '+569123123123',
     description:
@@ -55,7 +55,7 @@ const programs = [
     posttitle: 'veterinaria'
   },
   {
-    title: 'Consulta poética',
+    title: 'Consulta test',
     schedule: 'Mon to Fri',
     phone: '+569123123123',
     description:
@@ -69,7 +69,7 @@ const programs = [
 export const ProgramSlider = () => {
   return (
     <div className="w-full h-full">
-      <div className="w-full h-full flex flex-col items-center justify-center">
+      <div className="w-full h-full flex flex-col items-center justify-center my-5">
         <h2 className="text-primary font-normal text-xl">Conoce tus</h2>
         <span className="text-secondaryDark font-bold text-2xl">
           programas online

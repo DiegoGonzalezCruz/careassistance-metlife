@@ -12,7 +12,7 @@ module.exports = {
       input: '#9E9E9E',
       error: '#FF1F1F',
       backgroundDark: '#F4F4F4',
-      white: '#f0f0f0'
+      white: '#ffffff'
     },
     fontFamily: {
       Fira: ['Fira Sans', 'sans-serif'],
@@ -20,6 +20,7 @@ module.exports = {
       Titillium: ['Titillium Web', 'sans-serif']
     },
     fontSize: {
+      xs: '0.5rem',
       sm: '0.8rem',
       base: '1rem',
       'xl': '1.4rem',
@@ -28,6 +29,7 @@ module.exports = {
     },
     extend: {},
   },
+
   plugins: [
     require('@tailwindcss/typography'),
   ],

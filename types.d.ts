@@ -2,14 +2,15 @@ import { ReactNode } from 'react'
 import { JsxElement } from 'typescript'
 
 export interface Program {
+  idx?: number
   program: {
+    id?: number | string
     title: string
     schedule: string
     description: string
     img: string
     pretitle: string
     posttitle: string
-    idx?: number
   }
 }
 export interface Programs {
@@ -40,4 +41,9 @@ export interface Channels {
 
 export interface ButtonProps {
   children: string
+  colors?: {
+    text: string
+    bg: string
+  }
+  className?: HTMLAttributes
 }

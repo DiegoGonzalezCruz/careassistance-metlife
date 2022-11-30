@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import { Program } from '../../types'
+import Button from '../buttons/Button'
 
-const ProgramCard = ({ program }: Program) => {
+const ProgramCard = ({ program, idx }: Program) => {
   const features = [
     {
       title: '600 945 9800',
@@ -22,24 +23,29 @@ const ProgramCard = ({ program }: Program) => {
   ]
 
   return (
-    <div className=" rounded-xl snap-start md:snap-center w-full md:w-1/3 shrink-0 my-5 h-full first:ml-10 last:mr-10">
-      <Image
-        src={program.img}
-        alt={program.title}
-        width={150}
-        height={150}
-        className="rounded-full mx-auto"
-      />
-      <div className=" w-full h-full text-center my-2 ">
-        <h2 className="text-primary text-xl md:text-sm font-normal font-Montserrat lin">
-          {program.pretitle}
-          <br />
-          <span className="text-primary text-3xl md:text-xl font-Montserrat font-bold ">
-            {program.posttitle}
-          </span>{' '}
-        </h2>
-      </div>
-      <div className="w-3/4 mx-auto text-center ">
+    <div
+      id={`program${idx}`}
+      className=" shadow-xl rounded-xl snap-start md:snap-center w-full md:w-1/3 shrink-0 mt-14 h-full first:ml-10 last:mr-10 flex flex-col items-center py-5"
+    >
+      <div className="w-3/4 ">
+        <Image
+          src={program.img}
+          alt={program.title}
+          width={150}
+          height={150}
+          className="rounded-full mx-auto -translate-y-5 "
+        />
+        <div className=" w-full h-full text-center my-2 -translate-y-2">
+          <h2 className="text-primary text-xl md:text-sm font-normal font-Montserrat lin">
+            {program.pretitle}
+            <br />
+            <span className="text-primary text-3xl md:text-xl font-Montserrat font-bold ">
+              {program.posttitle}
+            </span>{' '}
+          </h2>
+        </div>
+        <Button className="bg-secondary">Conocer Más</Button>
+        {/* <div className="w-3/4 mx-auto text-center ">
         <div
           className="text-primary prose prose-p:font-Titillium prose-p:text-primary md:prose-p:text-sm "
           dangerouslySetInnerHTML={{ __html: program.description }}
@@ -70,7 +76,8 @@ const ProgramCard = ({ program }: Program) => {
       <div
         className="w-3/4  md:w-full mx-auto text-center py-5 prose prose-p:text-sm prose-p:font-Fira prose-p:text-primary md:prose-p:text-sm"
         dangerouslySetInnerHTML={{ __html: program.schedule }}
-      />
+      /> */}
+      </div>
     </div>
   )
 }

@@ -8,13 +8,17 @@ const channels = [
   },
   {
     img: '/img/channels/Whatsapp.svg',
-    title: 'Web'
+    title: 'Video llamada'
+  },
+  {
+    img: '/img/channels/Whatsapp.svg',
+    title: 'Línea exclusiva'
   }
 ]
 
 export const Chanels = () => {
   return (
-    <div className="w-full ">
+    <div className="w-3/4 mx-auto py-10 ">
       <div className=" text-center">
         <h2 className="text-primary text-xl font-Titillium font-normal">
           Canales
@@ -23,16 +27,16 @@ export const Chanels = () => {
           exclusivos
         </span>
       </div>
-      <p className="w-3/4 mx-auto text-secondaryDark text-center py-5 text-base font-medium">
+      <p className="w-full mx-auto text-black text-center py-5 text-base font-medium">
         Ponemos a tu disposición, canales de atención exclusivos y recursos de
         comunicación estratégica, creados a la medida de tus necesidades.
       </p>
-      <ul className=" snap-x snap-mandatory flex flex-row overflow-scroll">
+      <ul className=" snap-x snap-mandatory flex flex-row overflow-scroll my-5 md:gap-5 py-5">
         {channels.map((channel) => {
           return (
             <li
               key={channel.title}
-              className=" rounded-xl shrink-0 w-full snap-start flex flex-col items-center gap-5 py-5"
+              className="  rounded-xl shrink-0 w-full md:w-1/4 md:mx-auto md:shadow-xl  snap-start flex flex-col items-center gap-5 py-5 "
             >
               <Image
                 src={channel.img}
