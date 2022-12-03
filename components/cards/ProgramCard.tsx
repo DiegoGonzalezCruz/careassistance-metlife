@@ -3,25 +3,6 @@ import { Program } from '../../types'
 import Button from '../buttons/Button'
 
 const ProgramCard = ({ program, idx }: Program) => {
-  const features = [
-    {
-      title: '600 945 9800',
-      img: '/img/logos/programFeatures/landline.svg'
-    },
-    {
-      title: '+56 9 9968 7935',
-      img: '/img/logos/programFeatures/cellphone.svg'
-    },
-    {
-      title: 'Chat Online',
-      img: '/img/logos/programFeatures/chat.svg'
-    },
-    {
-      title: 'Iniciar videollamada',
-      img: '/img/logos/programFeatures/telemedicina.svg'
-    }
-  ]
-
   return (
     <div
       id={`program${idx}`}
@@ -29,26 +10,25 @@ const ProgramCard = ({ program, idx }: Program) => {
     >
       <div className="w-full  flex flex-col gap-2">
         <Image
-          src={program.img}
-          alt={program.title}
+          src={program.acf.imagen}
+          alt={program.acf.titulo}
           width={150}
           height={150}
           className="rounded-full mx-auto -translate-y-5 h-24 w-fit "
         />
         <div className=" w-full h-full text-center my-2 -translate-y-2 ">
           <h2 className="text-primary text-xl md:text-sm font-normal font-Montserrat lin">
-            {program.pretitle}
+            {program.acf.pretitle}
             <br />
             <span className="text-primary text-3xl md:text-xl font-Montserrat font-bold ">
-              {program.posttitle}
+              {program.acf.posttitle}
             </span>{' '}
           </h2>
         </div>
         <div className="w-full mx-auto text-center  ">
-          <div
-            className="text-secondaryDark prose prose-p:font-Titillium prose-p:text-primary md:prose-p:text-sm "
-            dangerouslySetInnerHTML={{ __html: program.description }}
-          />
+          <p className="text-sm text-primary font-Titillium">
+            {program.acf.description}
+          </p>
         </div>
         <Button className="bg-secondary text-sm">
           Descubre más iniciando sesión

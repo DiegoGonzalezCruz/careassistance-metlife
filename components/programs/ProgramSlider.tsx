@@ -1,4 +1,5 @@
 import React from 'react'
+import { Programs } from '../../types'
 import ProgramList from '../lists/ProgramList'
 
 const programs = [
@@ -66,7 +67,7 @@ const programs = [
   }
 ]
 
-export const ProgramSlider = () => {
+export const ProgramSlider = ({ programs }: Programs) => {
   return (
     <div className="w-full h-full">
       <div className="w-full h-full flex flex-col items-center justify-center my-5">

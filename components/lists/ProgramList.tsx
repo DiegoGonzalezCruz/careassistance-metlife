@@ -17,7 +17,9 @@ const ProgramList = ({ programs }: Programs) => {
     <div className="w-full">
       <ul className="w-full flex flex-row overflow-scroll snap-x snap-mandatory md:gap-10 ">
         {programs.map((program, idx) => {
-          return <ProgramCard program={program} key={program.title} idx={idx} />
+          return (
+            <ProgramCard program={program} key={program.acf.titulo} idx={idx} />
+          )
         })}
       </ul>
       <div className="w-full mb-5 flex flex-row gap-5 items-center justify-center ">

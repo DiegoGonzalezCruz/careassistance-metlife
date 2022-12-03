@@ -7,7 +7,11 @@ import { Explore } from '../components/slider/Explore'
 import { MainSlider } from '../components/slider/MainSlider'
 import { SecondarySlider } from '../components/slider/SecondarySlider'
 
-export default function Home() {
+import { GetStaticProps } from 'next'
+import { Program, Programs } from '../types'
+
+export default function Home({ programs }: Programs) {
+  console.log('programs***', programs)
   return (
     <div className={''}>
       <Head>
@@ -19,7 +23,7 @@ export default function Home() {
       <main className="w-screen h-full">
         <Navigation />
         <MainSlider />
-        <ProgramSlider />
+        <ProgramSlider programs={programs} />
         <Chanels />
         <SecondarySlider />
         <Explore />
@@ -29,4 +33,19 @@ export default function Home() {
       <footer></footer>
     </div>
   )
+}
+
+export const getStaticProps: GetStaticProps<{ programs: Program[] }> = async (
+  context
+) => {
+  const res = await fetch(
+    'http://careassistance.co/wp-json/wp/v2/personalizados'
+  )
+  const programs: Program[] = await res.json()
+
+  return {
+    props: {
+      programs
+    }
+  }
 }

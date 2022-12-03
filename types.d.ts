@@ -4,24 +4,30 @@ import { JsxElement } from 'typescript'
 export interface Program {
   idx?: number
   program: {
-    id?: number | string
-    title: string
-    schedule: string
-    description: string
-    img: string
-    pretitle: string
-    posttitle: string
+    acf: {
+      titulo: string
+      imagen: string
+      imagen_modal: string
+      icono: string
+      horario: string
+      pretitle: string
+      posttitle: string
+      description: string
+    }
   }
 }
 export interface Programs {
   programs: {
-    img: string
-    title: string
-    description: string
-    phone: string
-    schedule: string
-    pretitle: string
-    posttitle: string
+    acf: {
+      titulo: string
+      imagen: string
+      imagen_modal: string
+      icono: string
+      horario: string
+      pretitle: string
+      posttitle: string
+      description: string
+    }
     idx?: number
   }[]
 }
