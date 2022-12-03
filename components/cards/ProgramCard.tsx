@@ -27,7 +27,7 @@ const ProgramCard = ({ program, idx }: Program) => {
       id={`program${idx}`}
       className=" shadow-xl rounded-xl snap-start md:snap-center w-full md:w-1/3 shrink-0 mt-14 h-full first:ml-10 last:mr-10 flex flex-col items-center py-5"
     >
-      <div className="w-3/4 ">
+      <div className="w-5/6 ">
         <Image
           src={program.img}
           alt={program.title}
@@ -45,13 +45,13 @@ const ProgramCard = ({ program, idx }: Program) => {
           </h2>
         </div>
         <Button className="bg-secondary">Conocer Más</Button>
-        {/* <div className="w-3/4 mx-auto text-center ">
+        {/* <div className="w-5/6 mx-auto text-center ">
         <div
           className="text-primary prose prose-p:font-Titillium prose-p:text-primary md:prose-p:text-sm "
           dangerouslySetInnerHTML={{ __html: program.description }}
         />
       </div>
-      <ul className="w-3/4 mx-auto flex flex-col gap-2 md:hidden ">
+      <ul className="w-5/6 mx-auto flex flex-col gap-2 md:hidden ">
         {features.map((feat) => {
           return (
             <li
@@ -74,7 +74,7 @@ const ProgramCard = ({ program, idx }: Program) => {
       </ul>
 
       <div
-        className="w-3/4  md:w-full mx-auto text-center py-5 prose prose-p:text-sm prose-p:font-Fira prose-p:text-primary md:prose-p:text-sm"
+        className="w-5/6  md:w-full mx-auto text-center py-5 prose prose-p:text-sm prose-p:font-Fira prose-p:text-primary md:prose-p:text-sm"
         dangerouslySetInnerHTML={{ __html: program.schedule }}
       /> */}
       </div>

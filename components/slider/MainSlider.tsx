@@ -16,7 +16,7 @@ export const MainSlider = () => {
             src="/img/sliders/bienvenido.svg"
             width={500}
             height={500}
-            className="object-contain h-full w-3/4"
+            className="object-contain h-full w-5/6"
             alt="bienvenidos a metlife orienta"
           />
         </div>

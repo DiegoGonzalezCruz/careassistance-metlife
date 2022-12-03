@@ -8,7 +8,7 @@ export const Navigation = () => {
         alt="metlife orienta"
         width={200}
         height={50}
-        className="w-3/4 bg-white md:h-1/3"
+        className="w-5/6 bg-white md:h-1/3"
       />
     </nav>
   )

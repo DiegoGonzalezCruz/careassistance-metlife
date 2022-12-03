@@ -18,7 +18,7 @@ const channels = [
 
 export const Chanels = () => {
   return (
-    <div className="w-3/4 mx-auto py-10 ">
+    <div className="w-5/6 mx-auto py-10 ">
       <div className=" text-center">
         <h2 className="text-primary text-xl font-Titillium font-normal">
           Canales
