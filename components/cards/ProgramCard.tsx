@@ -25,9 +25,9 @@ const ProgramCard = ({ program, idx }: Program) => {
   return (
     <div
       id={`program${idx}`}
-      className="debug1 shadow-xl rounded-xl snap-start md:snap-center w-full md:w-1/4 shrink-0 mt-14 h-full first:ml-10 last:mr-10 flex flex-col items-center py-5"
+      className=" shadow-xl rounded-xl snap-start md:snap-center w-full md:w-1/4 shrink-0 mt-14 h-full first:ml-10 last:mr-10 flex flex-col items-center py-5"
     >
-      <div className="w-full debug2 flex flex-col gap-2">
+      <div className="w-full  flex flex-col gap-2">
         <Image
           src={program.img}
           alt={program.title}
@@ -35,7 +35,7 @@ const ProgramCard = ({ program, idx }: Program) => {
           height={150}
           className="rounded-full mx-auto -translate-y-5 h-24 w-fit "
         />
-        <div className=" w-full h-full text-center my-2 -translate-y-2 debug1">
+        <div className=" w-full h-full text-center my-2 -translate-y-2 ">
           <h2 className="text-primary text-xl md:text-sm font-normal font-Montserrat lin">
             {program.pretitle}
             <br />
@@ -44,7 +44,7 @@ const ProgramCard = ({ program, idx }: Program) => {
             </span>{' '}
           </h2>
         </div>
-        <div className="w-full mx-auto text-center debug1 ">
+        <div className="w-full mx-auto text-center  ">
           <div
             className="text-secondaryDark prose prose-p:font-Titillium prose-p:text-primary md:prose-p:text-sm "
             dangerouslySetInnerHTML={{ __html: program.description }}

@@ -24,7 +24,7 @@ export const Explore = () => {
   return (
     <div className="w-full my-10 h-full ">
       <div className="w-5/6 mx-auto h-full ">
-        <div className="flex items-center justify-center my-5  debug2">
+        <div className="flex items-center justify-center my-5  ">
           <h2 className="text-primary text-xl font-Montserrat font-normal text-center">
             Explora
             <br />
@@ -33,19 +33,19 @@ export const Explore = () => {
             </span>
           </h2>
         </div>
-        <ul className="flex flex-row items-start justify-between gap-10 snap-x snap-mandatory w-full h-full debug1">
+        <ul className="flex flex-row items-start justify-between gap-10 snap-x snap-mandatory w-full h-full ">
           {benefits.map((benefit) => {
             return (
               <li
                 key={benefit.description}
-                className="w-full h-full  flex  flex-col gap-5 debug1 snap-start"
+                className="w-full h-full  flex  flex-col gap-5  snap-start"
               >
                 <Image
                   src={benefit.img}
                   width={300}
                   height={300}
                   alt={benefit.description}
-                  className="h-36 object-contain  debug2"
+                  className="h-36 object-contain  "
                 />
                 <h2 className=" w-full text-center text-primary text-xl md:text-2xl font-Titillium">
                   {benefit.description}
