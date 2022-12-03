@@ -5,12 +5,12 @@ import ButtonWhite from '../buttons/ButtonWhite'
 const benefits = [
   {
     img: '/img/sliders/explore1.png',
-    description: 'Problemas cardíacos, conoce los síntomas',
-    text: 'Leer Más'
+    description: 'Chequea tu estado de salud',
+    text: 'Iniciar test'
   },
   {
     img: '/img/sliders/explore2.png',
-    description: 'Conoce los descuentos disponibles',
+    description: 'Compra tus medicamentos',
     text: 'Ver descuentos'
   },
   {
@@ -22,9 +22,9 @@ const benefits = [
 
 export const Explore = () => {
   return (
-    <div className="w-full my-10 ">
-      <div className="w-5/6 mx-auto h-full">
-        <div className="flex items-center justify-center my-5 ">
+    <div className="w-full my-10 h-full ">
+      <div className="w-5/6 mx-auto h-full ">
+        <div className="flex items-center justify-center my-5  debug2">
           <h2 className="text-primary text-xl font-Montserrat font-normal text-center">
             Explora
             <br />
@@ -33,25 +33,24 @@ export const Explore = () => {
             </span>
           </h2>
         </div>
-        <ul className="flex flex-row items-start justify-between snap-x snap-mandatory  w-full h-full ">
+        <ul className="flex flex-row items-start justify-between gap-10 snap-x snap-mandatory w-full h-full debug1">
           {benefits.map((benefit) => {
             return (
               <li
                 key={benefit.description}
-                className="shrink-0 w-full md:w-1/4  flex flex-col items-center justify-center snap-start"
+                className="w-full h-full  flex  flex-col gap-5 debug1 snap-start"
               >
-                <div className="w-full mx-auto  flex flex-col gap-5 items-center justify-between h-full ">
-                  <Image
-                    src={benefit.img}
-                    width={300}
-                    height={300}
-                    alt={benefit.description}
-                  />
-                  <h2 className=" w-full text-center text-primary text-xl md:text-2xl font-Titillium">
-                    {benefit.description}
-                  </h2>
-                  <ButtonWhite className="bg-white">Leer Más</ButtonWhite>
-                </div>
+                <Image
+                  src={benefit.img}
+                  width={300}
+                  height={300}
+                  alt={benefit.description}
+                  className="h-36 object-contain  debug2"
+                />
+                <h2 className=" w-full text-center text-primary text-xl md:text-2xl font-Titillium">
+                  {benefit.description}
+                </h2>
+                <ButtonWhite className="bg-white">{benefit.text}</ButtonWhite>
               </li>
             )
           })}

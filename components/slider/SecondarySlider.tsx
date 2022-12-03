@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
+import Button from '../buttons/Button'
 
 const features = [
   {
     description:
-      'Compra aquí el medicamento genérico que necesitas y aprovecha el descuento que tenemos para ti',
-    img: '/img/sliders/SecondarySlider.png'
+      'Si quieres conocer más sobre como funcionan nuestros programas y el uso que podrás darle, inicia sesión aquí.',
+    img: '/img/sliders/familia.png'
   }
 ]
 
@@ -17,7 +18,7 @@ export const SecondarySlider = () => {
           return (
             <li
               key={feat.description}
-              className="bg-primary flex flex-col md:flex-row items-center justify-between  w-full h-full "
+              className="bg-primary flex flex-col md:flex-row-reverse items-center justify-between  w-full h-full "
             >
               <Image
                 src={feat.img}
@@ -26,13 +27,12 @@ export const SecondarySlider = () => {
                 alt={feat.description}
                 className="w-full md:w-1/2 md:h-full  object-cover"
               />
-              <div className="flex flex-col items-center justify-center gap-5 md:w-1/2 h-full py-5 ">
-                <div className="bg-primary w-5/6 mx-auto text-center">
+              <div className="flex flex-col items-center justify-center gap-5 md:w-1/2 h-full py-5   ">
+                <div className="w-3/4 mx-auto flex flex-col gap-5 ">
                   <p className="text-white">{feat.description}</p>
+
+                  <Button className="font-Montserrat">Llévame ahí</Button>
                 </div>
-                <button className="bg-secondary rounded-full w-5/6 px-4 py-2 bold-button text-white">
-                  Comprar online
-                </button>
               </div>
             </li>
           )

@@ -59,10 +59,10 @@ span {
 }
 
 @layer components {
-  . {
+  .debug1 {
     @apply border-2 border-error;
   }
-  . {
+  .debug2 {
     @apply border-2 border-secondary;
   }
 }

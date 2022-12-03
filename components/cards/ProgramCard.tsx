@@ -25,17 +25,17 @@ const ProgramCard = ({ program, idx }: Program) => {
   return (
     <div
       id={`program${idx}`}
-      className=" shadow-xl rounded-xl snap-start md:snap-center w-full md:w-1/3 shrink-0 mt-14 h-full first:ml-10 last:mr-10 flex flex-col items-center py-5"
+      className="debug1 shadow-xl rounded-xl snap-start md:snap-center w-full md:w-1/4 shrink-0 mt-14 h-full first:ml-10 last:mr-10 flex flex-col items-center py-5"
     >
-      <div className="w-5/6 ">
+      <div className="w-full debug2 flex flex-col gap-2">
         <Image
           src={program.img}
           alt={program.title}
           width={150}
           height={150}
-          className="rounded-full mx-auto -translate-y-5 "
+          className="rounded-full mx-auto -translate-y-5 h-24 w-fit "
         />
-        <div className=" w-full h-full text-center my-2 -translate-y-2">
+        <div className=" w-full h-full text-center my-2 -translate-y-2 debug1">
           <h2 className="text-primary text-xl md:text-sm font-normal font-Montserrat lin">
             {program.pretitle}
             <br />
@@ -44,14 +44,17 @@ const ProgramCard = ({ program, idx }: Program) => {
             </span>{' '}
           </h2>
         </div>
-        <Button className="bg-secondary">Conocer Más</Button>
-        {/* <div className="w-5/6 mx-auto text-center ">
-        <div
-          className="text-primary prose prose-p:font-Titillium prose-p:text-primary md:prose-p:text-sm "
-          dangerouslySetInnerHTML={{ __html: program.description }}
-        />
-      </div>
-      <ul className="w-5/6 mx-auto flex flex-col gap-2 md:hidden ">
+        <div className="w-full mx-auto text-center debug1 ">
+          <div
+            className="text-secondaryDark prose prose-p:font-Titillium prose-p:text-primary md:prose-p:text-sm "
+            dangerouslySetInnerHTML={{ __html: program.description }}
+          />
+        </div>
+        <Button className="bg-secondary text-sm">
+          Descubre más iniciando sesión
+        </Button>
+
+        {/*    <ul className="w-5/6 mx-auto flex flex-col gap-2 md:hidden ">
         {features.map((feat) => {
           return (
             <li
