@@ -20,8 +20,8 @@ module.exports = {
       Titillium: ['Titillium Web', 'sans-serif']
     },
     fontSize: {
-      xs: '0.5rem',
-      sm: '0.8rem',
+      xs: '0.6rem',
+      sm: '0.9rem',
       base: '1rem',
       'xl': '1.4rem',
       '2xl': '1.65rem',

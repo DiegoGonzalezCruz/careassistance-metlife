@@ -27,10 +27,10 @@ export default function Home({ programs }: Programs) {
         <Chanels />
         <SecondarySlider />
         <Explore />
-        <Footer />
       </main>
-
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }

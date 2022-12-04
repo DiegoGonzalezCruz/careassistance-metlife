@@ -46,6 +46,7 @@ export interface Channels {
 }
 
 export interface ButtonProps {
+  onClick?: MouseEventHandler
   children: string
   colors?: {
     text: string

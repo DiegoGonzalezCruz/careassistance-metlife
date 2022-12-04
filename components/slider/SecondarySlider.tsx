@@ -31,7 +31,9 @@ export const SecondarySlider = () => {
                 <div className="w-3/4 mx-auto flex flex-col gap-5 ">
                   <p className="text-white">{feat.description}</p>
 
-                  <Button className="font-Montserrat">Llévame ahí</Button>
+                  <Button className="font-Montserrat font-bold">
+                    Llévame ahí
+                  </Button>
                 </div>
               </div>
             </li>
