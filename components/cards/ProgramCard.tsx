@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import { useState } from 'react'
-import { Program } from '../../types'
+import { Program, ProgramFromREST, Programs, ProgramsModal } from '../../types'
 import Button from '../buttons/Button'
 import ProgramModal from '../laylout/ProgramModal'
 
 const ProgramCard = ({ program, idx }: Program) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [programToModal, setProgramToModal] = useState<Program>()
+  const [programToModal, setProgramToModal] = useState<ProgramsModal>()
 
-  const modalOpener = (prgm: Program) => {
+  const modalOpener = (prgm: ProgramsModal) => {
     console.log('modal open', prgm)
     setIsModalOpen(true)
     setProgramToModal(prgm)
@@ -45,7 +45,7 @@ const ProgramCard = ({ program, idx }: Program) => {
               </p>
             </div>
             <Button
-              onClick={() => modalOpener(program)}
+              onClick={() => modalOpener(program as any)}
               className="bg-secondary text-sm "
             >
               Descubre más iniciando sesión
@@ -57,7 +57,11 @@ const ProgramCard = ({ program, idx }: Program) => {
           </div>
         </div>
       </div>
-      <ProgramModal program={program} />
+      <ProgramModal
+        program={programToModal}
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      />
     </>
   )
 }

@@ -16,6 +16,36 @@ export interface Program {
     }
   }
 }
+export interface ProgramFromREST {
+  idx?: number
+  acf: {
+    titulo: string
+    imagen: string
+    imagen_modal: string
+    icono: string
+    horario: string
+    pretitle: string
+    posttitle: string
+    description: string
+  }
+}
+
+export interface ProgramsModal {
+  program: {
+    acf: {
+      titulo: string
+      imagen: string
+      imagen_modal: string
+      icono: string
+      horario: string
+      pretitle: string
+      posttitle: string
+      description: string
+    }
+  }
+  isModalOpen: boolean
+  setIsModalOpen: Function
+}
 export interface Programs {
   programs: {
     acf: {
