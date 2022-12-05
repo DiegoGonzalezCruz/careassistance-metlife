@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const MainSlider = () => {
   return (
-    <div className="w-full h-[50vh] ">
+    <div className="w-full h-[50vh]  ">
       <div className="w-full h-full flex md:flex-row-reverse flex-col">
         <Image
           src="/img/sliders/mainslider.png"

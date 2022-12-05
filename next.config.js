@@ -2,21 +2,19 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  experimental: {
+    // appDir: true
+  },
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'careassistance.co',
-        port: '',
-        pathname: '/**',
+        // port: '',
+        // pathname: '/**',
       },
     ],
   },
-  experimental: {
-    // appDir: true
-
-
-  }
 }
 
 module.exports = nextConfig

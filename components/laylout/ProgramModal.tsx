@@ -16,16 +16,16 @@ const ProgramModal = ({ program, isModalOpen, setIsModalOpen }: any) => {
         }`}
       >
         <div className="card h-5/6 mt-10 w-5/6 bg-white mx-auto relative rounded-xl">
-          <div className="wrapper w-full mx-auto h-full   debug1">
-            <div className="h-1/2 debug1 flex flex-row justify-between">
-              <div className="debug1 flex flex-row items-center justify-around w-1/2">
+          <div className="wrapper w-full mx-auto h-full   ">
+            <div className="h-1/2  flex flex-row justify-between">
+              <div className=" flex flex-row items-center justify-around w-1/2">
                 <Image
                   src={programToView.acf.icono}
                   alt={programToView.acf.titulo}
                   width={100}
                   height={100}
                 />
-                <h2 className="font-Montserrat text-xl text-primary debug1 w-1/2">
+                <h2 className="font-Montserrat text-xl text-primary  w-1/2">
                   {programToView.acf.pretitle}
                   <br />
                   <b>{programToView.acf.posttitle}</b>
@@ -37,7 +37,7 @@ const ProgramModal = ({ program, isModalOpen, setIsModalOpen }: any) => {
                   src={programToView.acf.imagen_modal}
                   width={100}
                   height={100}
-                  className="w-full h-full object-contain debug1"
+                  className="w-full h-full object-contain "
                 />
               </div>
             </div>
@@ -45,7 +45,7 @@ const ProgramModal = ({ program, isModalOpen, setIsModalOpen }: any) => {
               <p className="text-primary font-Titillium">
                 {programToView.acf.description}
               </p>
-              <div className="flex flex-row items-center justify-between debug1 w-full gap-10">
+              <div className="flex flex-row items-center justify-between  w-full gap-10">
                 <p className="text-sm text-primary">
                   {programToView.acf.horario}
                 </p>

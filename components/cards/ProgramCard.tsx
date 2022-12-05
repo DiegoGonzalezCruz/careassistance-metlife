@@ -17,9 +17,9 @@ const ProgramCard = ({ program, idx }: Program) => {
     <>
       <div
         id={`program${idx}`}
-        className=" shadow-xl rounded-xl snap-start md:snap-center w-full h-[60vh] md:w-1/4   shrink-0 first:ml-10 last:mr-10 flex flex-col items-center my-2 "
+        className=" shadow-xl rounded-xl snap-start md:snap-center w-full h-full md:w-1/4 shrink-0 first:ml-10 last:mr-10 flex flex-col items-center my-2 "
       >
-        <div className="w-full h-full flex flex-col items-center justify-around  px-5 md:px-0">
+        <div className="w-full h-full flex flex-col items-center justify-around gap-5 px-5 py-5">
           <div className=" w-full h-fit ">
             <Image
               src={program.acf.imagen}
@@ -38,22 +38,22 @@ const ProgramCard = ({ program, idx }: Program) => {
               </h2>
             </div>
           </div>
-          <div className=" w-full h-fit flex flex-col justify-end ">
-            <div className="w-full mx-auto text-center  ">
+          <div className=" w-full h-fit flex flex-col gap-5 justify-end ">
+            {/* <div className="w-full mx-auto text-center  ">
               <p className="text-base text-primary font-Titillium">
                 {program.acf.description}
               </p>
-            </div>
+            </div> */}
             <Button
               onClick={() => modalOpener(program as any)}
               className="bg-secondary text-sm "
             >
-              Descubre más iniciando sesión
+              Conoce más
             </Button>
 
-            <p className="text-xs font-Titillium text-secondaryDark text-center">
+            {/* <p className="text-sm font-Titillium text-secondaryDark text-center">
               {program.acf.horario}
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

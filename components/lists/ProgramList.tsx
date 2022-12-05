@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 const ProgramList = ({ programs }: Programs) => {
-  console.log(programs, 'programs LIST')
+  // console.log(programs, 'programs LIST')
 
   const [indexSnap, setIndexSnap] = useState(0)
 

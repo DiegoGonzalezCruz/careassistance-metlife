@@ -11,7 +11,7 @@ import { GetStaticProps } from 'next'
 import { Program, Programs } from '../types'
 
 export default function Home({ programs }: Programs) {
-  console.log('programs***', programs)
+  // console.log('programs***', programs)
   return (
     <div className={''}>
       <Head>
