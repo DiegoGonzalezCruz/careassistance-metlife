@@ -45,7 +45,7 @@ export const Chanels = () => {
                 alt={channel.title}
                 className="h-24 w-full "
               />
-              <h2 className="text-secondaryDark text-xl font-Fira">
+              <h2 className="text-secondaryDark text-xl font-Fira text-center">
                 {channel.title}
               </h2>
             </li>

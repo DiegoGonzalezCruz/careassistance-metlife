@@ -45,7 +45,7 @@ export const Explore = () => {
                   width={300}
                   height={300}
                   alt={benefit.description}
-                  className="h-48 object-contain  "
+                  className="h-48 object-contain mx-auto "
                 />
                 <h2 className=" w-full text-center text-primary text-xl md:text-2xl font-Titillium">
                   {benefit.description}

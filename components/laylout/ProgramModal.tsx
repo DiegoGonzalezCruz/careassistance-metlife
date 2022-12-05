@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 const ProgramModal = ({ program, isModalOpen, setIsModalOpen }: any) => {
-  console.log(program, '*******HERE')
+  // console.log(program, '*******HERE')
   const programToView = program
   if (programToView) {
     return (
@@ -31,7 +31,7 @@ const ProgramModal = ({ program, isModalOpen, setIsModalOpen }: any) => {
                   <b>{programToView.acf.posttitle}</b>
                 </h2>
               </div>
-              <div className="debug2 h-full">
+              <div className=" h-full">
                 <Image
                   alt={programToView.acf.titulo}
                   src={programToView.acf.imagen_modal}

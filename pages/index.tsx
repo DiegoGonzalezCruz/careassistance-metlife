@@ -9,9 +9,13 @@ import { SecondarySlider } from '../components/slider/SecondarySlider'
 
 import { GetStaticProps } from 'next'
 import { Program, Programs } from '../types'
+import { useEffect, useState } from 'react'
+import FirstModal from '../components/laylout/FirstModal'
 
 export default function Home({ programs }: Programs) {
   // console.log('programs***', programs)
+  const [isModalOpen, setIsModalOpen] = useState(true)
+
   return (
     <div className={''}>
       <Head>
@@ -27,6 +31,7 @@ export default function Home({ programs }: Programs) {
         <Chanels />
         <SecondarySlider />
         <Explore />
+        <FirstModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       </main>
       <footer>
         <Footer />
